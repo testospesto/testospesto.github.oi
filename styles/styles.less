@@ -1,0 +1,520 @@
+//@import "_media.less";
+.container {
+	width: 100%;
+}
+
+body {
+	background-image: url(../image/nota.png);
+	background-size: 50px 50px;
+}
+
+.customContainer {
+	max-width: 900px;
+	margin: auto;
+
+}
+
+.dFlex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.padding {
+	padding: 30px;
+
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+	height: 100%;
+}
+
+.buttonHover {
+	background-color: #FF5b00;
+	border: 1px solid #FF8C00;
+	box-shadow: 5px 10px 5px #FF5b00;
+}
+
+.align {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+		
+}
+
+header {
+	width: 100%;
+	background-color: white;
+
+	.headerTop {
+
+		width: 100%;
+		border-bottom: 2px #FF8C00 solid;
+		
+		.burgerMenu {
+			li {
+				
+			}
+		}
+
+		ul {
+			
+			padding-left: 0;
+		}
+
+		.socialIcons {
+//			width: 50%;
+
+			i {
+				color: #d2d2d2;
+				height: 32px;
+//				font-size: 52px;
+				margin-right: 20px;
+			}
+		}
+
+		.miniMenu {
+			font-family: Georgia;
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 14.4px;
+			text-align: left;
+			height: 13px;
+			li {
+				color: #FF8C00;
+			}
+		}
+		.navbar-default {
+			width: 100%;
+			margin-bottom: 0;
+		}
+	}
+	@media all and (min-width:479px) {
+		.navbar {
+			display: none;
+		}
+	}
+
+	.header {
+		.margin {
+			margin-top: 50px;
+			flex-wrap: wrap;
+			align-items: flex-start;
+		}
+		.logo {}
+		
+		.hLogo{
+			font-family: Georgia;
+			color: #FF8C00;
+			font-size: 17px; 
+			
+		}
+		
+		.cLogo {
+			font-family: Georgia;
+			color: #FF8C00;
+			font-size: 13px;
+			
+		}
+		
+		.customContainer {
+			width: 100%;
+		}
+		display: flex;
+		align-items: center;
+		background-color: #ebebeb;
+		height: 270px;
+
+
+		.input-group {
+
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: flex-end;
+			input {
+				height: 33px;
+				width: 218px;
+			}
+			button {
+				background-color: #FF8C00;
+				width: 75px;
+				height: 33px;
+				font-family: Georgia;
+				color: #ffffff;
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 14.4px;
+				text-align: center;
+				transition-duration: 1s;
+			}
+			button:hover {
+				.buttonHover;
+			}
+		}
+	}
+}
+
+@media all and (max-width:480px) {
+	//	.customContainer {
+	//		max-width: auto;
+	//	}
+	.headerTop {
+		.socialIcons {
+			display: none;
+		}
+		.miniMenu {
+			display: none;
+		}
+//		display: none;
+
+	}
+	.header {
+		display: block;
+		img {
+			margin-bottom: 10px;
+		}
+		
+	}
+
+}
+
+main {
+	//	border-radius: 10px 10px 0 0;
+	.grid {
+		border-radius: 10px 10px 0 0;
+		background-color: white;
+		margin-top: -130px;
+
+		.title {
+			img {
+				width: 30%;
+			}
+//			p {
+//				font-family: Georgia sans-serif;
+//				font-size: 22px;
+////				font-weight: bold;
+//			}
+		}
+
+
+		.menu {
+			height: 50px;
+			background-color: #FF8C00;
+			border-radius: 10px 10px 0 0;
+
+			li {
+				font-family: Georgia sans-serif;
+				color: #ffffff;
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 12px;
+				text-align: left;
+				width: 67px;
+				height: 100%;
+				text-align: center;
+				transition-duration: 1s;
+			}
+
+			li:hover {
+				.buttonHover
+			}
+
+		}
+		#carousel-example-generic {
+			//			height: 350px;
+		}
+
+		.bigTitle {
+			margin: 40px auto;
+
+		}
+
+		.preview {
+			display: grid;
+			grid-template: ~"200px 200px  / 300px 300px 300px";
+
+			.info {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				justify-content: space-between;
+			}
+
+			.imgPreview {
+				flex-shrink: 0;
+				margin-right: 10px;
+				height: 64px;
+				width: 64px;
+//				background-color: darkslategrey;
+				
+				i {
+					color:  #FF8C00;
+				}
+			}
+			
+
+
+		}
+
+		.twoArticles {
+			display: grid; //			grid-template: ~"100px 200px / 400px 400px";
+			grid-template: ~"50px 200px / 1fr 1fr";
+			grid-template-areas: "smallHeader smallHeader2" "article articalQuote";
+
+			.smallHeader {
+				grid-area: smallHeader;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				margin: auto;
+				
+				h3 {
+					margin: -10px 3px;
+				}
+
+				img {
+					width: 150px;
+					height: 5px;
+				}
+
+			}
+
+			.article {
+				grid-area: article;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				justify-content: space-between;
+
+				.roundPhoto {
+					flex-shrink: 0;
+					background-color: darkslategray;
+					border-radius: 50%;
+					height: 128px;
+					width: 128px;
+					margin-right: 10px;
+				}
+
+			}
+
+			.smallHeader2 {
+				grid-area: smallHeader2;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				margin: auto;
+				
+				h3 {
+					margin: -10px 1px 0 1px;
+				}
+
+				img {
+					width: 30%;
+					height: 5px;
+				}
+
+
+			}
+
+			.articalQuote {
+				grid-area: articalQuote;
+				img {
+					float: left;
+					margin-right: 5px;
+				}
+
+
+			}
+		}
+		.banner {
+			margin-bottom: 50px;
+			justify-content: space-around;
+			background-color: #FF8C00;
+			width: 900px;
+			height: 106px;
+			color: white;
+			border-radius: 10px;
+			h4 {
+				font-family: Georgia;
+				color: #e5e5e5;
+//				font-size: 36px;
+//				font-weight: 400;
+//				line-height: 40px;
+				text-align: left;
+//				width: 515px;
+//				height: 36px;
+			}
+			p {
+				font-family: Georgia;
+				color: #e5e5e5;
+				font-size: 18px;
+				font-weight: 400;
+				line-height: 21.6px;
+				text-align: left;
+				width: 503px;
+				height: 18px;
+			}
+			button {
+				color: #FF8C00;
+				background-color: #ffffff;
+				width: 279px;
+				height: 58px;
+				border-radius: 10px;
+				float: right;
+				font-family: Georgia;
+				font-size: 26px;
+				font-weight: 400;
+				line-height: 31.2px;
+				text-align: center;
+
+			}
+		}
+	}
+}
+
+@media all and (max-width:480px) {
+	.menu {
+		display: none;
+	}
+	main .grid .preview {
+		grid-template: ~"200px 200px 200px 200px 200px 200px / 1fr";
+		.info {
+			justify-content: center;
+		}
+	}
+	main .grid .twoArticles {
+		grid-template-columns: 1fr;
+		grid-template-areas: "smallHeader" "article" "smallHeader2" "articalQuote";
+		.article {
+			justify-content: center;
+		}
+	}
+	.banner {
+		display: none;
+	}
+}
+
+footer {
+	border-top: 5px #d2d2d2 solid; //	height: 355px;
+	background-color: #ebebeb;
+	display: grid;
+	padding: 0 20px;
+	grid-template: ~"75px 120px 140px 50px / 2fr 1fr 1fr";
+	grid-template-areas: "title1 title2 title3" "mention contacts feedback " "mention2 cntacts feedback " "copyright copyright copyright";
+
+
+
+	.title1,
+	.title2,
+	.title3 {
+		font-family: Georgia;
+		color: #333333;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 19.2px;
+		text-align: left;
+		width: 152px;
+		height: 15px;
+	}
+	.mention,
+	.mention2 {
+		img {
+			margin-right: 5px;
+		}
+		.mentionHeader {
+			font-family: Georgia;
+			color: #FF8C00;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 16px;
+			text-align: left;
+			width: 178px;
+			height: 12px;
+		}
+		p {
+			font-family: Georgia;
+			color: #999999;
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 21.6px;
+			text-align: left;
+		}
+	}
+
+	.mention {
+		grid-area: mention;
+	}
+	.mention2 {
+		grid-area: mention2;
+	}
+	.contacts {
+		grid-area: contacts;
+		font-family: Georgia;
+		color: #999999;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 19.2px;
+		text-align: left;
+		width: 136px; //		height: 70px;
+	}
+	.feedback {
+		grid-area: feedback;
+		input {
+			background-color: #ffffff;
+			width: 225px;
+			height: 31px;
+			border-radius: 5px;
+			margin-bottom: 10px;
+		}
+		textarea {
+			background-color: #ffffff;
+			width: 225px;
+			height: 110px;
+			border-radius: 5px;
+			margin-bottom: 10px;
+		}
+		button {
+			background-color: #FF8C00;
+			width: 80px;
+			height: 31px;
+			color: white;
+			font-family: Georgia;
+			color: #ffffff;
+			font-size: 13px;
+			font-weight: 400;
+			line-height: 20.583px;
+			border-radius: 10px;
+			text-align: center;
+		}
+
+	}
+
+
+
+	.copyright {
+		border-top: 1px #d2d2d2 solid;
+		grid-area: copyright;
+		width: 100%;
+		font-family: Georgia;
+		color: #999999;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 14.4px;
+		text-align: left;
+
+
+	}
+}
+
+@media all and (max-width:991px) {
+	footer {
+		grid-template-columns: 1fr;
+		grid-template-areas: "title1" "mention" "mention2" "title2" "contacts" "title3" "feedback" "copyright";
+		grid-template-rows: auto;
+		grid-row-gap: 10px;
+	}
+}
